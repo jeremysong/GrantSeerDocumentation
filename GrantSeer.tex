@@ -27,6 +27,12 @@ This document aims to guide you design reusable apps and loosely coupled system 
 
 The complete reference and tutorial of Django could be found at \\ https://docs.djangoproject.com/en/1.6/
 
+\subsubsection*{Versions}
+\begin{description}
+	\item\ Python 2.7
+	\item\ Django 1.6
+\end{description}
+
 
 \section{GrantSeer Architecture}
 As we want to decouple the whole system, new GrantSeer is split into two services: \texttt{GrantSeerFrontendService} and \texttt{SeerBackendService}. In service design pattern, \texttt{Frontend Service} basically is responsible for interacting with users, generating request to \texttt{Backend Service} and rendering the data transferred from \texttt{Backend Service} for users. \texttt{Backend Service} is responsible for interacting with \texttt{MySQL} database, grouping and sorting those data and what not. In Django, \texttt{Backend Serivce} should be regarded as a data persistent layer of web app, even it could do more stuff.
